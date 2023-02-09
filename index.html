@@ -35,8 +35,8 @@
 		<div class="row">
       		<div class ="one-half column">&nbsp;</div>
       		<div class="eleven columns">
-			<form action="/predict" method="POST">
       			<script src="Custom.js"></script>
+      			<form action="{{ url_for('predict_fun')}}" method="POST">
       				<center>
       					<!-- <input type="text" name="cpmment"/> -->
       					<textarea class="u-full-width" placeholder="Isi Text Disini" name = "message" rows="20" style="min-height: 50"></textarea>
@@ -44,7 +44,7 @@
       					<br />
       					<input type="submit" class="button-primary" value="Prediksi Text">
       				</center>
-			</form>
+      			</form>
       		</div>
     	</div>
   	</div><br><br> 
