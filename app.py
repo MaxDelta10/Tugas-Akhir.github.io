@@ -20,9 +20,9 @@ def load_models():
 @app.route('/')
 def home():
 	# return "ok"
-	return render_template('home.html')
+	return render_template('index.php')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict_fun():
 	print('do a prediction')
 	if request.method == 'POST':
@@ -30,9 +30,9 @@ def predict_fun():
 		message = request.form['message']
 		data = [message]
 		pre = tfidf_model.predict(data)
-	return render_template('result.html',prediction = pre[0], message = message)
+	return render_template('result.php',prediction = pre[0], message = message)
 
 if __name__ == '__main__':
 	# print("HELLO")
 	# print(pt)
-	app.run(threaded=True)
+	app.run(debug=True)
