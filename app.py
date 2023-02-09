@@ -30,7 +30,7 @@ def predict_fun():
 		message = request.form['message']
 		data = [message]
 		pre = tfidf_model.predict(data)
-	return render_template('result.php',prediction = pre[0], message = message)
+	return render_template('result.html',prediction = pre[0], message = message)
 
 if __name__ == '__main__':
 	# print("HELLO")
