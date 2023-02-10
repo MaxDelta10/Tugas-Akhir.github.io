@@ -20,7 +20,7 @@ def load_models():
 @app.route('/')
 def home():
 	# return "ok"
-	return render_template('index.php')
+	return render_template('index.html')
 
 @app.route('/predict', methods=["GET", "POST"])
 def predict:
