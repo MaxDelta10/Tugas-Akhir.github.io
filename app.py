@@ -5,7 +5,7 @@ import string
 import re 
 from costum import process_text as pt
 import __main__
-__main__.process_text = process_text
+__main__.process_text = pt
 
 #Import process_text
 app = Flask(__name__)
