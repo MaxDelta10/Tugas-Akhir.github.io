@@ -3,9 +3,9 @@ import pickle
 import joblib
 import string
 import re 
-from custom import process_text as pt
+from custom import finalpreprocess as fp
 import __main__
-__main__.process_text = pt
+__main__.finalpreprocess = fp
 
 #Import process_text
 app = Flask(__name__)
