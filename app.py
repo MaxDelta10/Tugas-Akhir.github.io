@@ -22,7 +22,7 @@ def home():
 	# return "ok"
 	return render_template('index.php')
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=["GET", "POST"])
 def predict_fun():
 	print('do a prediction')
 	if request.method == 'POST':
