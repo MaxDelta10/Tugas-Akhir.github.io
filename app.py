@@ -23,7 +23,7 @@ def home():
 	return render_template('index.php')
 
 @app.route('/predict', methods=["GET", "POST"])
-def predict_fun():
+def predict:
 	print('do a prediction')
 	if request.method == 'POST':
 
