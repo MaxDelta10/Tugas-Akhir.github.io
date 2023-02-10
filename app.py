@@ -3,7 +3,7 @@ import pickle
 import joblib
 import string
 import re 
-from costum import process_text as pt
+from custom import process_text as pt
 import __main__
 __main__.process_text = pt
 
