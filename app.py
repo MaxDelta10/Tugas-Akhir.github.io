@@ -17,7 +17,7 @@ def load_models():
 	global tfidf_model
 	tfidf_model = joblib.load(open('trained_model.pkl','rb'))
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def home():
 	# return "ok"
 	return render_template('index.html')
