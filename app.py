@@ -17,12 +17,12 @@ def load_models():
 	global tfidf_model
 	tfidf_model = joblib.load(open('trained_model.pkl','rb'))
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=['GET', 'POST'])
 def home():
 	# return "ok"
 	return render_template('index.html')
 
-@app.route('/predict', methods=["GET", "POST"])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
 	print('do a prediction')
 	if request.method == 'POST':
